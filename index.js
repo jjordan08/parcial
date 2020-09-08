@@ -24,7 +24,7 @@ appServer.post ('/newgame', (req, res)=>{
 
 // 2. Eliminar un juego por id enviado como parámetro
 
-appServer.post ('/deleteGame/:id', (req, res)=>{
+appServer.delete ('/deleteGame/:id', (req, res)=>{
     const id = req.params.id
     listGames.forEach(function (element, index)  {
         if(element.id == id) {
