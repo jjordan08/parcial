@@ -1,7 +1,7 @@
 const express = require ('express');
 const appServer = express();
 
-const myUser = require ('./games/games');
+const myUser = require ('./models/game');
 
 appServer.use(express.json());
 
