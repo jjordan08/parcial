@@ -45,8 +45,8 @@ appServer.get ('/listaVideojuegos',
 
 // 4. Traer un usuario por id enviado como parámetro
 
-appServer.get ('/getGame/:idGame' , (req, res)=>{
-    const gameId = req.params.idGame
+appServer.get ('/getGameById/:id' , (req, res)=>{
+    const gameId = req.params.id
     listGames.forEach(function (element, index)  {
         if(element.id == gameId) {
             console.log("Encontro el videojuego por id")
@@ -57,10 +57,10 @@ appServer.get ('/getGame/:idGame' , (req, res)=>{
 
 // 5. Traer un juego por nombre enviado como parámetro
 
-appServer.get ('/getGame/:name' , (req, res)=>{
-    const name = req.params.name
+appServer.get ('/getGameByGame/:title' , (req, res)=>{
+    const title = req.params.title
     listGames.forEach(function (element, index)  {
-        if(element.name == name) {
+        if(element.title == title) {
             console.log("Encontro el nombre videojuego")
             res.json(element)
         }
