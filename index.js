@@ -13,7 +13,7 @@ appServer.listen (3000, ()=>{
 
 // 1. Crear un nuevo juego
 
-appServer.post ('/newgame' , (req, res)=>{
+appServer.post ('/newgame', (req, res)=>{
 
     // Agregamos el juego al arreglo
 
@@ -45,9 +45,9 @@ appServer.get ('/listaVideojuegos',
 
 // 4. Traer un usuario por id enviado como parámetro
 
-appServer.get ('/getUser/:idGame' , (req, res)=>{
+appServer.get ('/getGame/:idGame' , (req, res)=>{
     const gameId = req.params.idGame
-    listUsers.forEach(function (element, index)  {
+    listGames.forEach(function (element, index)  {
         if(element.id == gameId) {
             console.log("Encontro el videojuego por id")
             res.json(element)
@@ -61,7 +61,7 @@ appServer.get ('/getGame/:name' , (req, res)=>{
     const name = req.params.name
     listGames.forEach(function (element, index)  {
         if(element.name == name) {
-            console.log("Encontro el nombre")
+            console.log("Encontro el nombre videojuego")
             res.json(element)
         }
     });
