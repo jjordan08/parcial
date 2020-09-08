@@ -55,5 +55,4 @@ appServer.get ('/getUser/:idGame' , (req, res)=>{
     });
 });
 
-
 test
