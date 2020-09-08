@@ -66,3 +66,20 @@ appServer.get ('/getGame/:name' , (req, res)=>{
         }
     });
 });
+
+
+// 6. Traer todos los usuarios menores a una edad enviada como parámetro
+
+
+appServer.get ('/getGamesByAge/:age' , (req, res)=>{
+
+    const age = req.params.age
+    var listGamesByAge = []
+
+    listGames.forEach(function (element, index)  {
+        if(element.age < age) {
+            listGamesByAge.push(element)
+        }
+    });
+    res.json(listGamesByAge)
+});
