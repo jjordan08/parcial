@@ -68,7 +68,7 @@ appServer.get ('/getGameByGame/:title' , (req, res)=>{
 });
 
 
-// 6. Traer todos los usuarios menores a una edad enviada como parámetro
+// 6. Traer todos los videojuegos menores a un año de lanzamiendo enviado como parámetro
 
 
 appServer.get ('/getGamesByAge/:age' , (req, res)=>{
