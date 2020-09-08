@@ -54,3 +54,15 @@ appServer.get ('/getUser/:idGame' , (req, res)=>{
         }
     });
 });
+
+// 5. Traer un juego por nombre enviado como parámetro
+
+appServer.get ('/getGame/:name' , (req, res)=>{
+    const name = req.params.name
+    listGames.forEach(function (element, index)  {
+        if(element.name == name) {
+            console.log("Encontro el nombre")
+            res.json(element)
+        }
+    });
+});
