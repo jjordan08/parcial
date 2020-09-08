@@ -29,7 +29,7 @@ appServer.post ('/deleteGame/:idGame' , (req, res)=>{
     listGames.forEach(function (element, index)  {
         if(element.id == id) {
             console.log("Se elimino el juego por ID")
-            listUsers.splice(index, 1)
+            listGames.splice(index, 1)
         }
     });
     res.send ('List Updated');
