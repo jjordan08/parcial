@@ -1,7 +1,7 @@
 const game = {
-    titulo : "",
-    estudio : "",
-    añoDeLanzamiento: "",
-    edad: "",
-    carrera: ""
+    id : "",
+    title : "",
+    studio : "",
+    year: "",
+    age: "",
 }
