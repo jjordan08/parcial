@@ -77,7 +77,7 @@ appServer.get ('/getGamesByAge/:age' , (req, res)=>{
     var listGamesByAge = []
 
     listGames.forEach(function (element, index)  {
-        if(element.age < age) {
+        if(element.year < age) {
             listGamesByAge.push(element)
         }
     });
